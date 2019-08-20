@@ -1,0 +1,277 @@
+$icomoon-font-path: "../fonts/znaimesta" !default;
+
+$ic-photo: "\e927";
+$ic-star: "\e926";
+$ic-vk: "\e923";
+$ic-facebook: "\e924";
+$ic-instagram: "\e925";
+$ic-add-image: "\e900";
+$ic-message: "\e901";
+$ic-clock-tilted: "\e902";
+$ic-marker-map: "\e903";
+$ic-article: "\e904";
+$ic-plus-light: "\e905";
+$ic-plus-solid: "\e906";
+$ic-image: "\e907";
+$ic-company: "\e908";
+$ic-landmark: "\e909";
+$ic-like: "\e90a";
+$ic-more: "\e90b";
+$ic-eye: "\e90c";
+$ic-comment: "\e90d";
+$ic-marker-to-map: "\e90e";
+$ic-x-light: "\e90f";
+$ic-envelope: "\e910";
+$ic-phone: "\e911";
+$ic-clock: "\e912";
+$ic-route: "\e913";
+$ic-exit: "\e914";
+$ic-arrow: "\e915";
+$ic-site: "\e916";
+$ic-bookmakr-solid: "\e917";
+$ic-bookmakr-light: "\e918";
+$ic-share: "\e919";
+$ic-pane-regular: "\e91a";
+$ic-x-solid: "\e91b";
+$ic-pane-solid: "\e91c";
+$ic-bike: "\e91d";
+$ic-menu: "\e91e";
+$ic-search: "\e91f";
+$ic-arrow-send: "\e920";
+$ic-done: "\e921";
+$ic-user: "\e922";
+
+@font-face {
+  font-family: 'znaimesta';
+  src:  url('#{$icomoon-font-path}/znaimesta.eot?rpenct');
+  src:  url('#{$icomoon-font-path}/znaimesta.eot?rpenct#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/znaimesta.ttf?rpenct') format('truetype'),
+  url('#{$icomoon-font-path}/znaimesta.woff?rpenct') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'znaimesta';
+    src:  url('#{$icomoon-font-path}/znaimesta.svg?rpenct#znaimesta') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+.ic {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'znaimesta' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-photo {
+  &:before {
+    content: $ic-photo;
+  }
+}
+.ic-star {
+  &:before {
+    content: $ic-star;
+  }
+}
+.ic-vk {
+  &:before {
+    content: $ic-vk;
+  }
+}
+.ic-facebook {
+  &:before {
+    content: $ic-facebook;
+  }
+}
+.ic-instagram {
+  &:before {
+    content: $ic-instagram;
+  }
+}
+.ic-add-image {
+  &:before {
+    content: $ic-add-image;
+  }
+}
+.ic-message {
+  &:before {
+    content: $ic-message;
+  }
+}
+.ic-clock-tilted {
+  &:before {
+    content: $ic-clock-tilted;
+  }
+}
+.ic-marker-map {
+  &:before {
+    content: $ic-marker-map;
+  }
+}
+.ic-article {
+  &:before {
+    content: $ic-article;
+  }
+}
+.ic-plus-light {
+  &:before {
+    content: $ic-plus-light;
+  }
+}
+.ic-plus-solid {
+  &:before {
+    content: $ic-plus-solid;
+  }
+}
+.ic-image {
+  &:before {
+    content: $ic-image;
+  }
+}
+.ic-company {
+  &:before {
+    content: $ic-company;
+  }
+}
+.ic-landmark {
+  &:before {
+    content: $ic-landmark;
+  }
+}
+.ic-like {
+  &:before {
+    content: $ic-like;
+  }
+}
+.ic-more {
+  &:before {
+    content: $ic-more;
+  }
+}
+.ic-eye {
+  &:before {
+    content: $ic-eye;
+  }
+}
+.ic-comment {
+  &:before {
+    content: $ic-comment;
+  }
+}
+.ic-marker-to-map {
+  &:before {
+    content: $ic-marker-to-map;
+  }
+}
+.ic-x-light {
+  &:before {
+    content: $ic-x-light;
+  }
+}
+.ic-envelope {
+  &:before {
+    content: $ic-envelope;
+  }
+}
+.ic-phone {
+  &:before {
+    content: $ic-phone;
+  }
+}
+.ic-clock {
+  &:before {
+    content: $ic-clock;
+  }
+}
+.ic-route {
+  &:before {
+    content: $ic-route;
+  }
+}
+.ic-exit {
+  &:before {
+    content: $ic-exit;
+  }
+}
+.ic-arrow {
+  &:before {
+    content: $ic-arrow;
+  }
+}
+.ic-site {
+  &:before {
+    content: $ic-site;
+  }
+}
+.ic-bookmakr-solid {
+  &:before {
+    content: $ic-bookmakr-solid;
+  }
+}
+.ic-bookmakr-light {
+  &:before {
+    content: $ic-bookmakr-light;
+  }
+}
+.ic-share {
+  &:before {
+    content: $ic-share;
+  }
+}
+.ic-pane-regular {
+  &:before {
+    content: $ic-pane-regular;
+  }
+}
+.ic-x-solid {
+  &:before {
+    content: $ic-x-solid;
+  }
+}
+.ic-pane-solid {
+  &:before {
+    content: $ic-pane-solid;
+  }
+}
+.ic-bike {
+  &:before {
+    content: $ic-bike;
+  }
+}
+.ic-menu {
+  &:before {
+    content: $ic-menu;
+  }
+}
+.ic-search {
+  &:before {
+    content: $ic-search;
+  }
+}
+.ic-arrow-send {
+  &:before {
+    content: $ic-arrow-send;
+  }
+}
+.ic-done {
+  &:before {
+    content: $ic-done;
+  }
+}
+.ic-user {
+  &:before {
+    content: $ic-user;
+  }
+}
