@@ -7,7 +7,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
 
-
+    <link href="css/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl-carousel/owl.theme.default.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -63,11 +64,11 @@
                             </div>
                         </div>
                         <!--  Подписаться-->
-                        <div class="b-card-profile--subscribe">
+                        <div class="b-card-profile--subscribe d-desktop">
                             <span>Подписаться</span>
                         </div>
                         <!-- Мои закладки -->
-                        <a href="#" class="b-card-profile--bookmarks" style="display: none;">
+                        <a href="#" class="b-card-profile--bookmarks d-desktop" style="display: none;">
                             <i class="ic ic-bookmakr-light"></i>
                             <span>Мои закладки</span>
                         </a>
@@ -78,6 +79,16 @@
                                         <a href="" class="b-card-profile--place">
                                             <i class="ic ic-marker-map"></i>
                                             Москва
+                                        </a>
+                                    </div>
+                                    <div class="d-mobile">
+                                        <!--  Подписаться-->
+                                        <div class="b-card-profile--subscribe">
+                                            <span>Подписаться</span>
+                                        </div>
+                                        <!-- Мои закладки -->
+                                        <a href="#" class="b-card-profile--bookmarks" style="display: none;">
+                                            <span>Мои закладки</span>
                                         </a>
                                     </div>
                                 </div>
@@ -94,14 +105,6 @@
                                             <div class="b-card-profile--user-badge">Бывалый</div>
                                         </div>
                                     </div>
-                                    <div class="d-desktop">
-                                        <div class="b-card-profile--title text-center">Александра Александрова</div>
-                                        <div class="b-card-profile--subtitle text-center">@aleksandraalexandrova_1994</div>
-                                        <div class="b-card-profile--description text-center">
-                                            С развитием камер смартфонов в путешествиях становится удобнее снимать на телефон,
-                                            а большие зеркалки все чаще остаются дома.
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col-sm-3 col-4 d-flex order-sm-3 order-1">
                                     <div class="b-popover">
@@ -112,29 +115,85 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-mobile text-center">
-                                <a href="" class="b-card-profile--place">
-                                    <i class="ic ic-marker-map"></i>
-                                    Москва
-                                </a>
+                            <div class="accordion">
+                                <div class="d-mobile text-center">
+                                    <a href="" class="b-card-profile--place">
+                                        <i class="ic ic-marker-map"></i>
+                                        Москва
+                                    </a>
+                                </div>
                                 <div class="b-card-profile--title text-center">Александра Александрова</div>
                                 <div class="b-card-profile--subtitle text-center">@aleksandraalexandrova_1994</div>
-                                <div class="b-card-profile--description text-center">
-                                    С развитием камер смартфонов в путешествиях становится удобнее снимать на телефон,
-                                    а большие зеркалки все чаще остаются дома.
-                                </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-auto">
-                                    <div class="b-card-profile--text">
-                                        Подписчики
-                                        <span>2780</span>
+                                <div class="d-desktop">
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-10 col-md-9 col-lg-6 col-10">
+                                            <div class="b-card-profile--description text-center">
+                                                С развитием камер смартфонов в путешествиях становится удобнее снимать на телефон,
+                                                а большие зеркалки все чаще остаются дома.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-auto col-10">
+                                            <div class="b-card-profile--text">
+                                                Подписчики
+                                                <span class="complete">2780</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-auto col-10 ml-4">
+                                            <div class="b-card-profile--text">
+                                                Подписки
+                                                <span>0</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-auto ml-4">
-                                    <div class="b-card-profile--text">
-                                        Подписки
-                                        <span>125</span>
+                                <div class="d-mobile">
+                                    <div class="accordion-panel">
+                                        <div class="row justify-content-center">
+                                            <div class="col-sm-10 col-md-9 col-lg-6 col-10">
+                                                <div class="b-card-profile--description text-center">
+                                                    С развитием камер смартфонов в путешествиях становится удобнее снимать на телефон,
+                                                    а большие зеркалки все чаще остаются дома.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-sm-auto col-10">
+                                                <div class="b-card-profile--text">
+                                                    Подписчики
+                                                    <span class="complete">2780</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-auto col-10 ml-4">
+                                                <div class="b-card-profile--text">
+                                                    Подписки
+                                                    <span>0</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-mobile social-icon">
+                                            <div class="row justify-content-center">
+                                                <div class="col-auto d-flex align-items-center">
+                                                    <a class="d-flex align-items-center" href="#">
+                                                        <i class="ic ic-vk"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="col-auto d-flex align-items-center">
+                                                    <a class="d-flex align-items-center" href="#">
+                                                        <i class="ic ic-facebook"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="col-auto d-flex align-items-center">
+                                    <span class="d-flex align-items-center">
+                                        <i class="ic ic-instagram"></i>
+                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-control">
+                                        <img src="images/arrow-wide.svg" alt="arrow" title="">
                                     </div>
                                 </div>
                             </div>
@@ -142,23 +201,278 @@
 
                     </div>
                     <div class="b-tabs">
-                        <nav>
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item col active" id="nav-tape-tab" data-toggle="tab" href="#nav-tape" role="tab" aria-controls="nav-tape" aria-selected="true">Лента</a>
-                                <a class="nav-item col" id="nav-photo-tab" data-toggle="tab" href="#nav-photo" role="tab" aria-controls="nav-photo" aria-selected="false">Фото</a>
-                                <a class="nav-item col" id="nav-article-tab" data-toggle="tab" href="#nav-article" role="tab" aria-controls="nav-article" aria-selected="false">Статьи</a>
-                                <a class="nav-item col" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-controls="nav-reviews" aria-selected="false">Отзывы</a>
-                                <a class="nav-item col" id="nav-routes-tab" data-toggle="tab" href="#nav-routes" role="tab" aria-controls="nav-routes" aria-selected="false">Маршруты</a>
+                        <div class="b-tabs--top d-flex">
+                            <ul class="b-tabs--nav">
+                                <li class="tab-link current" data-tab="tab-1">Лента</li>
+                                <li class="tab-link" data-tab="tab-2">Фото</li>
+                                <li class="tab-link" data-tab="tab-3">Статьи</li>
+                                <li class="tab-link" data-tab="tab-4">Отзывы</li>
+                                <li class="tab-link" data-tab="tab-5">Маршруты</li>
+                            </ul>
+                            <div class="b-tabs--add">
+                                <i class="ic ic-plus-light"></i>
+                                <span>Добавить</span>
                             </div>
-                        </nav>
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-tape" role="tabpanel" aria-labelledby="nav-tape-tab" style="padding: 30px;">
+                        </div>
 
+                        <div id="tab-1" class="tab-content current">
+                            <div class="b-card card-article">
+                                <div class="b-card--head" style="background-image: url(images/preview-1.png)">
+                                    <div class="b-card--badge">
+                                        <i class="ic ic-article"></i>
+                                    </div>
+                                </div>
+                                <div class="b-card--body">
+                                    <div class="item-1">
+                                        <a href="" class="b-card--title">
+                                            Как быстро и качественно обрабатывать снимки из путешествий
+                                        </a>
+                                    </div>
+                                    <div class="item-2">
+                                        <div class="add-bookmark js-add-bookmark"></div>
+                                        <div class="b-card--data">
+                                            <div class="d-flex align-items-center">
+                                                <i class="ic ic-clock"></i>
+                                                20 июля 2019
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-3">
+                                        <div class="b-card--description">
+                                            С развитием камер смартфонов в путешествиях становится удобнее снимать
+                                            на телефон, а большие зеркалки все чаще остаются дома. Если вы не 
+                                            собираетесь печатать снимки на больших плакатах для выставок, 
+                                            то смартфон — отличный девайс для съемки в путешествиях. 
+                                            Мы уже публиковали материал о том, как снимать на телефон. 
+                                            Настало время подробнее поговорить об обработке снимков.
+                                        </div>
+                                    </div>
+                                    <div class="item-4">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <a href="#" class="b-card--btn">Читать</a>
+                                            </div>
+                                            <div class="col d-flex align-items-end">
+                                                <ul class="statistic-comments">
+                                                    <li class="d-flex ">
+                                                        <i class="ic ic-eye"></i>
+                                                        <span>85</span>
+                                                    </li>
+                                                    <li class="d-flex ">
+                                                        <i class="ic ic-like"></i>
+                                                        <span>22</span>
+                                                    </li>
+                                                    <li class="d-flex ">
+                                                        <i class="ic ic-comment"></i>
+                                                        <span>12</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
                             </div>
-                            <div class="tab-pane fade" id="nav-photo" role="tabpanel" aria-labelledby="nav-photo-tab">...</div>
-                            <div class="tab-pane fade" id="nav-article" role="tabpanel" aria-labelledby="nav-article-tab">...</div>
-                            <div class="tab-pane fade" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">...</div>
-                            <div class="tab-pane fade" id="nav-routes" role="tabpanel" aria-labelledby="nav-routes-tab">...</div>
+
+                            <div class="b-card card-photo">
+                                <div class="b-card--head">
+                                    <div class="b-card--badge">
+                                        <i class="ic ic-image"></i>
+                                    </div>
+                                    <div class="b-slider">
+                                        <div class="js-slider owl-carousel">
+                                            <div>
+                                                <img class="img-slide" src="images/preview-1.png" alt="slide-1" title="">
+                                            </div>
+                                            <div>
+                                                <img class="img-slide" src="images/preview-1.png" alt="slide-1" title="">
+                                            </div>
+                                            <div>
+                                                <img class="img-slide" src="images/preview-1.png" alt="slide-1" title="">
+                                            </div>
+                                            <div>
+                                                <img class="img-slide" src="images/preview-1.png" alt="slide-1" title="">
+                                            </div>
+                                            <div>
+                                                <img class="img-slide" src="images/preview-1.png" alt="slide-1" title="">
+                                            </div>
+                                            <div>
+                                                <img class="img-slide" src="images/preview-1.png" alt="slide-1" title="">
+                                            </div>
+                                            <div>
+                                                <img class="img-slide" src="images/preview-1.png" alt="slide-1" title="">
+                                            </div>
+                                            <div>
+                                                <img class="img-slide" src="images/preview-1.png" alt="slide-1" title="">
+                                            </div>
+                                        </div>
+                                        <div class="slider-counter"></div>
+                                    </div>
+                                </div>
+                                <div class="b-card--body">
+                                    <div class="item-1">
+                                        <a href="" class="b-card--title">
+                                            Новые фотографии из
+                                            <span class="b-popover">
+                                                Кабардинка <i class="ic ic-marker-map"></i>
+                                                 <span class="b-popover--view">
+                                                    <span>
+                                                        Краснодарский край, Каневской район, ст. Подгорная, ул. Красная 23
+                                                    </span>
+                                                </span>
+                                            </span>
+
+                                        </a>
+                                    </div>
+                                    <div class="item-2">
+                                        <div class="b-card--data">
+                                            <div class="d-flex align-items-center">
+                                                <i class="ic ic-clock"></i>
+                                                20 июля 2019
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-4">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <a href="#" class="b-card--btn">Смотреть</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="b-card card-route">
+                                <div class="b-card--head" style="background-image: url(images/preview-3.png)">
+                                    <div class="b-card--badge">
+                                        <i class="ic ic-route"></i>
+                                    </div>
+                                </div>
+                                <div class="b-card--body">
+                                    <div class="item-1">
+                                        <a href="" class="b-card--title">
+                                            Маршрут по центру Москвы
+                                        </a>
+                                    </div>
+                                    <div class="item-2">
+                                        <div class="add-bookmark js-add-bookmark"></div>
+                                        <div class="b-card--data">
+                                            <div class="d-flex align-items-center">
+                                                <i class="ic ic-clock"></i>
+                                                20 июля 2019
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-3">
+                                        <div class="b-card--description">
+                                            С развитием камер смартфонов в путешествиях становится удобнее снимать на
+                                            телефон, а большие зеркалки все чаще остаются дома. Если вы не собираетесь
+                                            печатать снимки на больших плакатах для выставок, то смартфон — отличный
+                                            девайс для съемки в путешествиях.
+                                        </div>
+                                    </div>
+                                    <div class="item-4">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <a href="#" class="b-card--btn">Изучить</a>
+                                            </div>
+                                            <div class="col d-flex align-items-end">
+                                                <ul class="statistic-comments">
+                                                    <li class="d-flex ">
+                                                        <i class="ic ic-eye"></i>
+                                                        <span>85</span>
+                                                    </li>
+                                                    <li class="d-flex ">
+                                                        <i class="ic ic-like"></i>
+                                                        <span>22</span>
+                                                    </li>
+                                                    <li class="d-flex ">
+                                                        <i class="ic ic-comment"></i>
+                                                        <span>12</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="b-card card-review">
+                                <div class="b-card--head" style="background-image: url(images/preview-4.png)">
+                                    <div class="b-card--badge">
+                                        <i class="ic ic-star"></i>
+                                    </div>
+                                </div>
+                                <div class="b-card--body">
+                                    <div class="item-1">
+                                        <a href="" class="b-card--title">
+                                            Отзыв о месте:
+                                            <span class="">
+                                                Бар “Монталь”
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="item-2">
+                                        <div class="add-bookmark js-add-bookmark"></div>
+                                        <div class="b-card--data">
+                                            <div class="d-flex align-items-center">
+                                                <i class="ic ic-clock"></i>
+                                                20 июля 2019
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-3">
+                                        <div class="b-card--description">
+                                            С развитием камер смартфонов в путешествиях становится удобнее снимать на
+                                            телефон, а большие зеркалки все чаще остаются дома. Если вы не собираетесь
+                                            печатать снимки на больших плакатах для выставок, то смартфон — отличный
+                                            девайс для съемки в путешествиях.
+                                        </div>
+                                    </div>
+                                    <div class="item-4">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <a href="#" class="b-card--btn">Изучить</a>
+                                            </div>
+                                            <div class="col d-flex align-items-end">
+                                                <ul class="statistic-comments">
+                                                    <li class="d-flex ">
+                                                        <i class="ic ic-eye"></i>
+                                                        <span>85</span>
+                                                    </li>
+                                                    <li class="d-flex ">
+                                                        <i class="ic ic-like"></i>
+                                                        <span>22</span>
+                                                    </li>
+                                                    <li class="d-flex ">
+                                                        <i class="ic ic-comment"></i>
+                                                        <span>12</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-content">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div id="tab-3" class="tab-content">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </div>
+                        <div id="tab-4" class="tab-content">
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <div id="tab-5" class="tab-content">
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
                     </div>
                 </div>
@@ -170,7 +484,11 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>
