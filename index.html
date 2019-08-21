@@ -202,13 +202,15 @@
                     </div>
                     <div class="b-tabs">
                         <div class="b-tabs--top d-flex">
-                            <ul class="b-tabs--nav">
-                                <li class="tab-link current" data-tab="tab-1">Лента</li>
-                                <li class="tab-link" data-tab="tab-2">Фото</li>
-                                <li class="tab-link" data-tab="tab-3">Статьи</li>
-                                <li class="tab-link" data-tab="tab-4">Отзывы</li>
-                                <li class="tab-link" data-tab="tab-5">Маршруты</li>
-                            </ul>
+                            <div class="b-tabs--menu">
+                                <ul class="b-tabs--nav">
+                                    <li class="tab-link current" data-tab="tab-1">Лента</li>
+                                    <li class="tab-link" data-tab="tab-2">Фото</li>
+                                    <li class="tab-link" data-tab="tab-3">Статьи</li>
+                                    <li class="tab-link" data-tab="tab-4">Отзывы</li>
+                                    <li class="tab-link" data-tab="tab-5">Маршруты</li>
+                                </ul>
+                            </div>
                             <div class="b-tabs--add">
                                 <i class="ic ic-plus-light"></i>
                                 <span>Добавить</span>
@@ -232,7 +234,7 @@
                                         <div class="add-bookmark js-add-bookmark"></div>
                                         <div class="b-card--data">
                                             <div class="d-flex align-items-center">
-                                                <i class="ic ic-clock"></i>
+                                                <i class="ic ic-clock-tilted"></i>
                                                 20 июля 2019
                                             </div>
                                         </div>
@@ -328,7 +330,7 @@
                                     <div class="item-2">
                                         <div class="b-card--data">
                                             <div class="d-flex align-items-center">
-                                                <i class="ic ic-clock"></i>
+                                                <i class="ic ic-clock-tilted"></i>
                                                 20 июля 2019
                                             </div>
                                         </div>
@@ -350,6 +352,20 @@
                                     <div class="b-card--badge">
                                         <i class="ic ic-route"></i>
                                     </div>
+                                    <div class="b-card--info-route">
+                                        <div class="b-card--time-route">
+                                            <div class="circle">
+                                                <i class="ic ic-clock"></i>
+                                            </div>
+                                            <div class="text">30 мин</div>
+                                        </div>
+                                        <div class="b-card--distance-route">
+                                            <div class="circle">
+                                                <i class="ic ic-bike"></i>
+                                            </div>
+                                            <div class="text">2340 км</div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="b-card--body">
                                     <div class="item-1">
@@ -361,7 +377,7 @@
                                         <div class="add-bookmark js-add-bookmark"></div>
                                         <div class="b-card--data">
                                             <div class="d-flex align-items-center">
-                                                <i class="ic ic-clock"></i>
+                                                <i class="ic ic-clock-tilted"></i>
                                                 20 июля 2019
                                             </div>
                                         </div>
@@ -397,7 +413,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="card-route-bg"></div>
 
                                 </div>
                             </div>
@@ -416,12 +432,17 @@
                                                 Бар “Монталь”
                                             </span>
                                         </a>
+                                        <span class="all-rating">Общий рейтинг <span> 9,2</span></span>
                                     </div>
                                     <div class="item-2">
-                                        <div class="add-bookmark js-add-bookmark"></div>
-                                        <div class="b-card--data">
+                                        <div class="b-card--subtitle">Моя оценка</div>
+                                        <div class="my-mark">
+                                            <div class="my-mark--circle">10</div>
+                                            <span>/10</span>
+                                        </div>
+                                        <div class="b-card--data d-desktop">
                                             <div class="d-flex align-items-center">
-                                                <i class="ic ic-clock"></i>
+                                                <i class="ic ic-clock-tilted"></i>
                                                 20 июля 2019
                                             </div>
                                         </div>
@@ -437,29 +458,23 @@
                                     <div class="item-4">
                                         <div class="row">
                                             <div class="col-auto">
-                                                <a href="#" class="b-card--btn">Изучить</a>
+                                                <a href="#" class="b-card--btn">Читать</a>
                                             </div>
-                                            <div class="col d-flex align-items-end">
-                                                <ul class="statistic-comments">
-                                                    <li class="d-flex ">
-                                                        <i class="ic ic-eye"></i>
-                                                        <span>85</span>
-                                                    </li>
-                                                    <li class="d-flex ">
-                                                        <i class="ic ic-like"></i>
-                                                        <span>22</span>
-                                                    </li>
-                                                    <li class="d-flex ">
-                                                        <i class="ic ic-comment"></i>
-                                                        <span>12</span>
-                                                    </li>
-                                                </ul>
+                                            <div class="col d-mobile">
+                                                <div class="b-card--data">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ic ic-clock-tilted"></i>
+                                                        20 июля 2019
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
+                            </div>
+                            
+                            <div class="b-card-add">
+                                <a href="#">Показать ещё...</a>
                             </div>
                         </div>
                         <div id="tab-2" class="tab-content">

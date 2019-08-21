@@ -859,7 +859,7 @@ html, body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 body {
-  background-color: #E5E5E5; }
+  background-color: #F9F9F9; }
 
 .b-wrapper {
   width: 100%;
@@ -1342,20 +1342,29 @@ body {
     font-weight: 900;
     line-height: 21px;
     font-size: 1.125rem; }
-.b-tabs--nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  border-bottom: 2px solid #C2C2C2;
+.b-tabs--menu {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
   -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%; }
+.b-tabs--nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  height: 100%;
+  position: relative;
+  padding-bottom: 2px; }
+  .b-tabs--nav:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #C2C2C2;
+    bottom: 0; }
   .b-tabs--nav li {
     font-style: normal;
     font-weight: 500;
@@ -1375,7 +1384,8 @@ body {
     max-width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    position: relative; }
     .b-tabs--nav li.current {
       color: #F2A000;
       border-bottom-color: #F2A000; }
@@ -1434,7 +1444,6 @@ body {
     bottom: 0;
     display: inline-flex;
     justify-content: center;
-    width: 223px;
     height: 60px;
     align-items: flex-end;
     font-style: normal;
@@ -1442,7 +1451,7 @@ body {
     font-size: 1.125rem;
     line-height: 21px;
     color: #A3A3A3;
-    padding: 0 0 12px 0;
+    padding: 0 40px 12px 40px;
     z-index: -1; }
     .b-card--data i {
       font-size: 0.875rem;
@@ -1451,7 +1460,7 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 4px 14px rgba(219, 228, 227, 0.34);
     border-radius: 0 0 6px 6px;
-    padding: 27px 40px 30px;
+    padding: 27px 40px 50px;
     display: grid;
     grid-template-rows: auto 0 auto; }
   .b-card .item-1 {
@@ -1474,6 +1483,15 @@ body {
     line-height: 30px;
     margin-bottom: 17px;
     display: inline-block; }
+    .b-card--title span {
+      color: #2F80ED; }
+  .b-card--subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 21px;
+    color: #404040;
+    margin-bottom: 12px; }
   .b-card--description {
     color: #404040;
     font-style: normal;
@@ -1503,7 +1521,8 @@ body {
     position: relative;
     cursor: pointer;
     margin-left: auto;
-    margin-top: 10px; }
+    margin-top: 10px;
+    z-index: 2; }
     .b-card .add-bookmark:before {
       content: "\e918";
       font-family: 'znaimesta';
@@ -1536,15 +1555,27 @@ body {
   .b-card.card-route .b-card--badge {
     background-color: #6675FF; }
   .b-card.card-route .b-card--body {
-    grid-template-columns: 1fr 0 1fr 0px 10%;
-    background-image: url(../images/route.svg);
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
-    padding-bottom: 50px; }
+    grid-template-columns: 1fr 0 1fr 0px 10%; }
   .b-card.card-review .b-card--head {
     height: 202px; }
   .b-card.card-review .b-card--badge {
     background-color: #A2F43A; }
+  .b-card.card-review .b-card--body {
+    grid-template-columns: 1fr 0 1fr 0px 13%; }
+  .b-card .card-route-bg {
+    position: absolute;
+    bottom: 44px;
+    right: 0;
+    z-index: 0; }
+    .b-card .card-route-bg:before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/route.svg);
+      background-repeat: no-repeat;
+      width: 552px;
+      height: 188px;
+      bottom: 0;
+      right: 0; }
   .b-card .statistic-comments {
     display: flex; }
     .b-card .statistic-comments li {
@@ -1606,6 +1637,87 @@ body {
     color: #FFFFFF;
     z-index: 1;
     padding: 5px 18px; }
+  .b-card .all-rating {
+    color: #A3A3A3;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 14px; }
+    .b-card .all-rating span {
+      font-weight: 900; }
+  .b-card .my-mark {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end; }
+    .b-card .my-mark--circle {
+      background-image: url(../images/rating.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 0%;
+      width: 82px;
+      height: 82px;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 2.125rem;
+      line-height: 40px;
+      color: #414141;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .b-card .my-mark span {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.125rem;
+      line-height: 21px;
+      color: #A3A3A3; }
+  .b-card--info-route {
+    position: absolute;
+    bottom: -8px;
+    right: 58px;
+    display: flex; }
+    .b-card--info-route .text {
+      height: 17px;
+      padding: 1px 7px 1px 6px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.8125rem;
+      line-height: 15px;
+      color: #404040;
+      background: #FFFFFF;
+      border-radius: 4px 4px 0 0;
+      position: relative;
+      top: -8px; }
+    .b-card--info-route .circle {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto; }
+      .b-card--info-route .circle i {
+        color: #ffffff; }
+  .b-card--time-route {
+    margin-right: 5px;
+    position: relative; }
+    .b-card--time-route .circle {
+      background: #F2A000; }
+      .b-card--time-route .circle i {
+        font-size: 1.4375rem; }
+  .b-card--distance-route .circle {
+    background: #2F80ED; }
+    .b-card--distance-route .circle i {
+      font-size: 1.5rem; }
+
+.b-card-add {
+  text-align: center;
+  margin-bottom: 40px; }
+  .b-card-add a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 21px;
+    text-align: center;
+    color: #A3A3A3; }
 
 .b-slider {
   position: relative; }
@@ -1661,7 +1773,194 @@ body {
       padding: 5px 15px 5px;
       text-align: center; }
       .b-popover--view a {
-        white-space: normal; } }
+        white-space: normal; }
+
+  .b-card {
+    padding-bottom: 34px;
+    margin-bottom: 40px; }
+    .b-card--badge .ic-article {
+      font-size: 1.9375rem;
+      right: 25px;
+      bottom: 19px; }
+    .b-card--badge .ic-image {
+      font-size: 2.375rem;
+      right: 19px;
+      bottom: 15px; }
+    .b-card--badge .ic-route {
+      font-size: 2.1875rem;
+      right: 20px;
+      bottom: 17px; }
+    .b-card--badge .ic-star {
+      font-size: 1.8125rem;
+      right: 16px;
+      bottom: 17px; }
+    .b-card--data {
+      right: 0;
+      bottom: 0;
+      height: 42px;
+      font-size: 0.875rem;
+      line-height: 16px;
+      padding: 0 21px 12px 21px;
+      z-index: -1; }
+      .b-card--data i {
+        font-size: 0.75rem;
+        margin-right: 10px; }
+    .b-card--body {
+      padding: 22px 30px 35px; }
+    .b-card--title {
+      font-size: 1.125rem;
+      line-height: 21px;
+      margin-bottom: 10px; }
+    .b-card--subtitle {
+      font-size: 0.875rem;
+      line-height: 16px;
+      margin-bottom: 8px;
+      text-align: center; }
+    .b-card--description {
+      font-size: 0.75rem;
+      line-height: 14px;
+      margin-bottom: 20px;
+      max-width: 100%; }
+    .b-card--btn {
+      width: 120px;
+      height: 26px;
+      font-size: 0.875rem;
+      line-height: 16px; }
+    .b-card .add-bookmark {
+      width: 23px;
+      margin-top: 2px; }
+      .b-card .add-bookmark:before {
+        font-size: 1.3125rem; }
+    .b-card.card-article .b-card--head {
+      height: 150px; }
+    .b-card.card-article .b-card--badge {
+      top: -26px;
+      left: -28px;
+      width: 93px;
+      height: 93px; }
+    .b-card.card-photo .b-card--head {
+      height: 218px; }
+    .b-card.card-photo .b-card--badge {
+      top: -24px;
+      left: -23px;
+      width: 91px;
+      height: 88px; }
+    .b-card.card-photo .b-card--title {
+      margin-bottom: 25px; }
+    .b-card.card-photo .b-card--body {
+      padding-bottom: 40px; }
+    .b-card.card-route .b-card--head {
+      height: 150px; }
+    .b-card.card-route .b-card--badge {
+      top: -23px;
+      left: -21px;
+      width: 83px;
+      height: 83px; }
+    .b-card.card-review .b-card--head {
+      height: 138px; }
+    .b-card.card-review .b-card--badge {
+      top: -21px;
+      left: -19px;
+      width: 77px;
+      height: 77px; }
+    .b-card.card-review .b-card--body {
+      grid-template-columns: 1fr 0 1fr 0px 15%; }
+    .b-card .card-route-bg {
+      height: 186px;
+      width: 550px;
+      overflow: hidden; }
+      .b-card .card-route-bg:before {
+        background-image: url(../images/route-2.svg);
+        bottom: -61px;
+        right: -18px;
+        height: 186px;
+        width: 550px; }
+    .b-card .statistic-comments {
+      display: flex; }
+      .b-card .statistic-comments li {
+        margin-right: 20px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 14px;
+        color: #A3A3A3;
+        align-items: center; }
+      .b-card .statistic-comments i {
+        margin-right: 4px; }
+      .b-card .statistic-comments .ic-eye {
+        font-size: 1.1875rem; }
+      .b-card .statistic-comments .ic-like {
+        font-size: 1.0625rem; }
+      .b-card .statistic-comments .ic-comment {
+        font-size: 1.0625rem; }
+      .b-card .statistic-comments span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 14px;
+        color: #A3A3A3; }
+    .b-card .b-popover {
+      padding-top: 0;
+      color: #2F80ED; }
+      .b-card .b-popover--view {
+        opacity: 0;
+        right: auto;
+        left: 95%;
+        top: 100%;
+        padding: 10px 19px 10px;
+        width: 312px; }
+        .b-card .b-popover--view span {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 0.875rem;
+          line-height: 16px;
+          color: #A3A3A3;
+          display: inline-block; }
+      .b-card .b-popover:hover .b-popover--view {
+        opacity: 1;
+        visibility: visible;
+        z-index: 10; }
+    .b-card .img-slide {
+      height: 218px; }
+    .b-card .slider-counter {
+      right: 28px;
+      bottom: 14px;
+      font-size: 0.875rem;
+      line-height: 17px;
+      padding: 5px 15px; }
+    .b-card .all-rating {
+      display: block;
+      position: relative;
+      top: -4px;
+      margin-bottom: 15px; }
+    .b-card .my-mark--circle {
+      width: 53px;
+      height: 53px;
+      font-size: 1.5rem;
+      line-height: 28px;
+      background-size: 58px; }
+    .b-card .my-mark span {
+      font-size: 0.875rem;
+      line-height: 16px; }
+    .b-card--info-route {
+      right: 27px; }
+
+  .b-card-profile {
+    margin-bottom: 26px; }
+
+  .b-tabs--top {
+    margin-bottom: 44px; }
+  .b-tabs--add {
+    width: 105px;
+    height: 34px; }
+    .b-tabs--add span {
+      line-height: 19px;
+      font-size: 1rem; }
+  .b-tabs--nav {
+    padding-right: 16px; }
+    .b-tabs--nav li {
+      font-size: 1rem;
+      line-height: 19px; } }
 @media only screen and (max-width: 667px) {
   .b-main {
     padding-top: 68px; }
@@ -1842,6 +2141,287 @@ body {
 
   .accordion-panel {
     padding-bottom: 23px;
-    display: none; } }
+    display: none; }
+
+  .b-card {
+    padding-bottom: 0;
+    margin-bottom: 22px; }
+    .b-card--badge .ic-article {
+      font-size: 1.625rem;
+      right: 18px;
+      bottom: 13px; }
+    .b-card--badge .ic-image {
+      font-size: 1.8125rem;
+      right: 12px;
+      bottom: 11px; }
+    .b-card--badge .ic-route {
+      font-size: 1.75rem;
+      right: 15px;
+      bottom: 12px; }
+    .b-card--badge .ic-star {
+      font-size: 1.5rem;
+      right: 16px;
+      bottom: 14px; }
+    .b-card--data {
+      right: 0;
+      bottom: 0;
+      height: auto;
+      width: 100%;
+      justify-content: flex-end;
+      font-size: 0.75rem;
+      line-height: 14px;
+      padding: 13px 0 0;
+      z-index: 0;
+      position: relative; }
+      .b-card--data i {
+        font-size: 0.625rem;
+        margin-right: 8px; }
+    .b-card--body {
+      padding: 12px 12px 20px;
+      display: flex;
+      flex-flow: wrap; }
+    .b-card--title {
+      font-size: 1rem;
+      line-height: 19px;
+      margin-bottom: 4px; }
+    .b-card--subtitle {
+      font-size: 0.875rem;
+      line-height: 16px;
+      margin-bottom: 8px;
+      text-align: center; }
+    .b-card--description {
+      font-size: 0.5625rem;
+      line-height: 14px;
+      margin-bottom: 14px; }
+    .b-card--btn {
+      width: auto;
+      height: 27px;
+      font-size: 0.75rem;
+      line-height: 14px;
+      padding: 0 14px; }
+    .b-card .add-bookmark {
+      width: 23px;
+      margin-top: 0; }
+      .b-card .add-bookmark:before {
+        font-size: 1.625rem; }
+    .b-card .statistic-comments {
+      display: flex;
+      padding-top: 12px; }
+      .b-card .statistic-comments li {
+        margin-right: 16px; }
+      .b-card .statistic-comments i {
+        margin-right: 4px; }
+      .b-card .statistic-comments .ic-like {
+        font-size: 0.9375rem; }
+      .b-card .statistic-comments .ic-comment {
+        font-size: 0.9375rem; }
+      .b-card .statistic-comments span {
+        font-size: 0.6875rem;
+        line-height: 13px; }
+    .b-card.card-article .b-card--head {
+      height: 185px; }
+    .b-card.card-article .b-card--badge {
+      top: -19px;
+      left: -16px;
+      width: 68px;
+      height: 68px; }
+    .b-card.card-article .item-1 {
+      flex: 0 0 100%;
+      width: 100%;
+      order: 1; }
+    .b-card.card-article .item-2 {
+      flex: 0 0 45%;
+      width: 45%;
+      order: 4; }
+    .b-card.card-article .item-3 {
+      flex: 0 0 100%;
+      width: 100%;
+      order: 2; }
+    .b-card.card-article .item-4 {
+      flex: 0 0 55%;
+      width: 55%;
+      order: 3; }
+    .b-card.card-photo .b-card--badge {
+      top: -19px;
+      left: -16px;
+      width: 68px;
+      height: 68px; }
+    .b-card.card-photo .b-card--title {
+      margin-bottom: 14px; }
+    .b-card.card-photo .b-card--body {
+      padding-bottom: 25px; }
+    .b-card.card-photo .item-1 {
+      flex: 0 0 100%;
+      width: 100%;
+      order: 1; }
+    .b-card.card-photo .item-2 {
+      flex: 0 0 45%;
+      width: 45%;
+      order: 3; }
+    .b-card.card-photo .item-4 {
+      flex: 0 0 55%;
+      width: 55%;
+      order: 2; }
+    .b-card.card-route .b-card--head {
+      height: 185px; }
+    .b-card.card-route .b-card--badge {
+      top: -19px;
+      left: -16px;
+      width: 68px;
+      height: 68px; }
+    .b-card.card-route .item-1 {
+      flex: 0 0 100%;
+      width: 100%;
+      order: 1; }
+    .b-card.card-route .item-2 {
+      flex: 0 0 45%;
+      width: 45%;
+      order: 4; }
+    .b-card.card-route .item-3 {
+      flex: 0 0 100%;
+      width: 100%;
+      order: 2; }
+    .b-card.card-route .item-4 {
+      flex: 0 0 55%;
+      width: 55%;
+      order: 3; }
+    .b-card.card-review .b-card--head {
+      height: 185px; }
+    .b-card.card-review .b-card--title span {
+      display: block; }
+    .b-card.card-review .b-card--badge {
+      top: -19px;
+      left: -16px;
+      width: 68px;
+      height: 68px; }
+    .b-card.card-review .item-1 {
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      max-width: 100%;
+      order: 1; }
+    .b-card.card-review .item-2 {
+      flex: 0 0 95px;
+      width: 95px;
+      order: 2; }
+    .b-card.card-review .item-3 {
+      flex: 0 0 100%;
+      width: 100%;
+      order: 3; }
+    .b-card.card-review .item-4 {
+      flex: 0 0 100%;
+      width: 100%;
+      order: 4;
+      padding: 0 8px; }
+    .b-card--info-route {
+      bottom: -8px;
+      right: 0; }
+      .b-card--info-route .text {
+        height: 14px;
+        padding: 1px 7px 1px 5px;
+        font-size: 0.625rem;
+        line-height: 12px;
+        top: -6px; }
+      .b-card--info-route .circle {
+        width: 34px;
+        height: 34px; }
+    .b-card--time-route {
+      margin-right: 4px; }
+      .b-card--time-route .circle i {
+        font-size: 1.125rem; }
+    .b-card--distance-route .circle i {
+      font-size: 1.25rem; }
+    .b-card .card-route-bg {
+      display: none; }
+    .b-card .b-popover {
+      display: block; }
+      .b-card .b-popover--view {
+        left: 0;
+        top: 100%;
+        width: 280px;
+        transform: translate(0, 0); }
+        .b-card .b-popover--view span {
+          font-size: 0.75rem;
+          line-height: 14px; }
+    .b-card .slider-counter {
+      right: 12px;
+      bottom: 10px;
+      font-size: 0.5rem;
+      line-height: 9px;
+      padding: 2px 8px; }
+    .b-card .all-rating {
+      display: block;
+      position: relative;
+      top: -4px;
+      margin-bottom: 15px; }
+    .b-card .my-mark--circle {
+      width: 53px;
+      height: 53px;
+      font-size: 1.5rem;
+      line-height: 28px;
+      background-size: 58px; }
+    .b-card .my-mark span {
+      font-size: 0.875rem;
+      line-height: 16px; }
+
+  .b-card-profile {
+    margin-bottom: 26px; }
+
+  .b-tabs--top {
+    margin-bottom: 44px;
+    flex-flow: wrap; }
+  .b-tabs--menu {
+    width: 100%;
+    flex: 0 0 100%;
+    overflow-y: auto;
+    position: relative;
+    margin-bottom: 12px; }
+    .b-tabs--menu:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #C2C2C2;
+      bottom: 7px; }
+  .b-tabs--add {
+    width: 147px;
+    height: 32px;
+    border-bottom: none;
+    border-radius: 6px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 14px rgba(173, 181, 184, 0.4); }
+    .b-tabs--add i {
+      display: block;
+      color: #FCBC17;
+      margin-right: 3px; }
+    .b-tabs--add span {
+      line-height: 21px;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #FCBC17; }
+  .b-tabs--nav {
+    padding-right: 0;
+    width: 100%;
+    flex: 0 0 100%;
+    overflow-y: auto;
+    margin-bottom: 7px; }
+    .b-tabs--nav:before {
+      display: none; }
+    .b-tabs--nav li {
+      font-size: 1rem;
+      line-height: 1.1;
+      font-weight: normal;
+      padding-bottom: 0;
+      padding-left: 30px;
+      padding-right: 30px;
+      height: 42px; }
+      .b-tabs--nav li.current {
+        color: #FCBC17;
+        font-size: 1.25rem;
+        line-height: 1.1;
+        font-weight: 500; } }
 
 /*# sourceMappingURL=style.css.map */
