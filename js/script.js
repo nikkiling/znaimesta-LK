@@ -18,6 +18,7 @@ $(document).ready(function() {
     $('.accordion').on('click', '.accordion-control', function(e) {
         e.preventDefault();
         $('.accordion-panel').not(':animated').slideToggle();
+        $(".accordion-control").toggleClass("open");
     });
 });
 
@@ -34,6 +35,45 @@ $(document).ready(function(){
         $("#"+tab_id).addClass('current');
     });
 
+});
+
+//tabs scroll
+
+$(document).ready(function() {
+
+    var curDown = false,
+        curXPos = 0;
+
+
+    $(".js-tabs-menu").on("mousemove touchmove", function( e ) {
+        if(curDown === true){
+
+        var touchmove = e.type === 'touchmove',
+            e = touchmove ? e.originalEvent : e,
+            pageX = touchmove ? e.targetTouches[0].pageX : e.pageX,
+            pageY = touchmove ? e.targetTouches[0].pageY : e.pageY;
+
+            e.stopPropagation();
+
+            $(".js-tabs-menu").scrollLeft($(".js-tabs-menu").scrollLeft() + (curXPos - pageX));
+
+        }
+    });
+
+    $(".js-tab-item").on("mousedown touchstart", function( e ) {
+        curDown = true;
+
+        var touchstart = e.type === 'touchstart',
+            e = touchstart ? e.originalEvent : e,
+            pageX = touchstart ? e.targetTouches[0].pageX : e.pageX,
+            pageY = touchstart ? e.targetTouches[0].pageY : e.pageY;
+
+        curXPos = pageX;
+    });
+
+    $(".js-tabs-menu").on("mouseup touchend", function( e ) {
+        curDown = false;
+    });
 });
 
 $(document).ready(function() {

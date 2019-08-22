@@ -348,8 +348,13 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
-  padding-top: 6px;
+  padding-top: 3px;
   margin-left: auto;
+
+  .wrap-icon{
+    height: 8px;
+    overflow: hidden;
+  }
 
   .ic-more {
     color: #C2C2C2;
@@ -393,6 +398,13 @@
   display: none;
   cursor: pointer;
   padding-top: 10px;
+
+  &.open{
+    img{
+      transform: rotate(180deg);
+      transition: .25s
+    }
+  }
 }
 
 //tabs
@@ -403,16 +415,18 @@
   }
 
   &--add{
-    background: #FFFFFF;
-    box-shadow: 0px 4px 14px rgba(219, 228, 227, 0.34);
-    cursor: pointer;
-    border-radius: 12px 12px 0 0;
-    border-bottom: 2px solid #F2A000;
-    width: 139px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    &-btn{
+      background: #FFFFFF;
+      box-shadow: 0px 4px 14px rgba(219, 228, 227, 0.34);
+      cursor: pointer;
+      border-radius: 12px 12px 0 0;
+      border-bottom: 2px solid #F2A000;
+      width: 139px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     i{
       display: none;
@@ -498,9 +512,12 @@
 .b-card{
   padding-bottom: 44px;
   position: relative;
-  margin-bottom: 39px;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
+
+  +.b-card{
+    margin-top: 51px;
+  }
 
   &--head{
     box-shadow: 0px 4px 14px rgba(219, 228, 227, 0.34);
@@ -591,28 +608,16 @@
     box-shadow: 0px 4px 14px rgba(219, 228, 227, 0.34);
     border-radius: 0 0 6px 6px;
     padding: 27px 40px 50px;
-    display: grid;
-    grid-template-rows: auto 0 auto;
-  }
 
-  .item-1{
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-  }
 
-  .item-2{
-    grid-column: 5 / 6;
-    grid-row: 1 / 5;
-  }
+    &.mobile{
+      display: none !important;
+    }
 
-  .item-3{
-    grid-column: 1 / 4;
-    grid-row: 3 / 4;
-  }
+    &.desktop{
+      display: block !important;
+    }
 
-  .item-4{
-    grid-column: 1 / 4;
-    grid-row: 4 / 5;
   }
 
   &--title{
@@ -621,7 +626,7 @@
     font-weight: 500;
     @include rem(26);
     line-height: 30px;
-    margin-bottom: 17px;
+    margin-bottom: 14px;
     display: inline-block;
 
     span{
@@ -712,10 +717,6 @@
       top: -32px;
       left: -32px;
     }
-
-    .b-card--body{
-      grid-template-columns: 1fr 0 1fr 0px 10%;
-    }
   }
 
   &.card-photo{
@@ -736,7 +737,7 @@
     }
 
     .b-card--body{
-      padding-bottom: 40px;
+      padding-bottom: 43px;
     }
   }
 
@@ -753,10 +754,8 @@
       background-color: #6675FF;
     }
 
-    .b-card--body{
-      grid-template-columns: 1fr 0 1fr 0px 10%;
-
-
+    .b-card--description{
+      margin-bottom: 40px;
     }
   }
 
@@ -771,10 +770,6 @@
 
     .b-card--badge{
       background-color: #A2F43A;
-    }
-
-    .b-card--body{
-      grid-template-columns: 1fr 0 1fr 0px 13%;
     }
   }
 
@@ -936,7 +931,7 @@
 
     .text{
       height: 17px;
-      padding: 1px 7px 1px 6px;
+      padding: 2px 7px 1px 6px;
       font-style: normal;
       font-weight: 500;
       @include rem(13);
@@ -946,6 +941,13 @@
       border-radius: 4px 4px 0 0;
       position: relative;
       top: -8px;
+
+      em{
+        font-style: normal;
+        @include rem(9);
+        line-height: 11px;
+        padding-left: 1px;
+      }
     }
 
     .circle{
@@ -956,6 +958,7 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto;
+      position: relative;
 
       i{
         color: #ffffff;
@@ -972,6 +975,9 @@
 
       i{
         @include rem(23);
+        position: absolute;
+        top: 9px;
+        left: 10px;
       }
     }
 
@@ -982,7 +988,7 @@
       background: #2F80ED;
 
       i{
-        @include rem(24);
+        @include rem(27);
       }
     }
   }
@@ -991,6 +997,7 @@
 .b-card-add{
   text-align: center;
   margin-bottom: 40px;
+  margin-top: 22px;
   a{
     font-style: normal;
     font-weight: 500;
@@ -1166,7 +1173,10 @@
 
   .b-card{
     padding-bottom: 34px;
-    margin-bottom: 40px;
+
+    +.b-card{
+      margin-top: 40px;
+    }
 
     &--badge{
 
@@ -1217,7 +1227,7 @@
     &--title{
       @include rem(18);
       line-height: 21px;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
 
     &--subtitle{
@@ -1276,11 +1286,11 @@
       }
 
       .b-card--title{
-        margin-bottom: 25px;
+        margin-bottom: 24px;
       }
 
       .b-card--body{
-        padding-bottom: 40px;
+        padding-bottom: 28px;
       }
     }
 
@@ -1294,6 +1304,14 @@
         left: -21px;
         width: 83px;
         height: 83px;
+      }
+
+      .b-card--description{
+        margin-bottom: 22px;
+      }
+
+      .b-card--title{
+        margin-bottom: 10px;
       }
     }
 
@@ -1310,7 +1328,15 @@
       }
 
       .b-card--body{
-        grid-template-columns: 1fr 0 1fr 0px 15%;
+        padding-top: 18px;
+      }
+
+      .b-card--title{
+        margin-bottom: 10px;
+      }
+
+      .b-card--description{
+        margin-bottom: 18px;
       }
     }
 
@@ -1319,11 +1345,12 @@
       height: 186px;
       width: 550px;
       overflow: hidden;
+      bottom: 33px;
 
       &:before{
         background-image: url(../images/route-2.svg);
-        bottom: -61px;
-        right: -18px;
+        bottom: -60px;
+        right: -13px;
         height: 186px;
         width: 550px;
       }
@@ -1419,6 +1446,8 @@
     }
 
     .my-mark{
+      justify-content: center;
+      margin-left: 15px;
       &--circle{
         width: 53px;
         height: 53px;
@@ -1449,8 +1478,10 @@
     }
 
     &--add{
-      width: 105px;
-      height: 34px;
+      &-btn{
+        width: 105px;
+        height: 34px;
+      }
 
       span{
         line-height: 19px;
@@ -1593,19 +1624,19 @@
         height: 77px;
 
         .img-delete{
-          padding-bottom: 35px;
+          padding-bottom: 12px;
 
           i{
-            @include rem(41);
+            @include rem(18);
             color: #ffffff;
-            margin-bottom: 19px;
+            margin-bottom: 5px;
           }
 
           span{
             font-style: normal;
             font-weight: 500;
-            @include rem(12);
-            line-height: 14px;
+            @include rem(9);
+            line-height: 11px;
             color: #FFFFFF;
           }
         }
@@ -1687,6 +1718,16 @@
       line-height: 16px;
       margin-bottom: 6px;
     }
+
+    .it-1{
+      order: 3;
+    }
+    .it-2{
+      order: 2;
+    }
+    .it-3{
+      order: 1;
+    }
   }
 
   .social-icon{
@@ -1738,6 +1779,17 @@
       i {
         color: #2F80ED;
       }
+    }
+
+    .row{
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .col,
+    [class*="col-"]{
+      padding-left: 12px;
+      padding-right: 12px;
     }
   }
 
@@ -1819,6 +1871,14 @@
       padding: 12px 12px 20px;
       display: flex;
       flex-flow: wrap;
+
+      &.mobile{
+        display: flex !important;
+      }
+
+      &.desktop{
+        display: none !important;
+      }
     }
 
     &--title{
@@ -1918,6 +1978,11 @@
         flex: 0 0 55%;
         width: 55%;
         order: 3;
+
+        .col{
+          width: 100%;
+          flex: 0 0 100%;
+        }
       }
     }
 
@@ -1991,6 +2056,11 @@
         flex: 0 0 55%;
         width: 55%;
         order: 3;
+
+        .col{
+          width: 100%;
+          flex: 0 0 100%;
+        }
       }
     }
 
@@ -2052,6 +2122,11 @@
         @include rem(10);
         line-height: 12px;
         top: -6px;
+
+        em{
+          @include rem(7);
+          line-height: 8px;
+        }
       }
 
       .circle{
@@ -2066,6 +2141,8 @@
       .circle{
         i{
           @include rem(18);
+          top: 7px;
+          left: 8px;
         }
       }
 
@@ -2075,6 +2152,9 @@
       .circle{
         i{
           @include rem(20);
+          position: absolute;
+          top: 6px;
+          left: 7px;
         }
       }
     }
@@ -2151,30 +2231,31 @@
 
     &--menu{
       width: 100%;
-      flex: 0 0 100%;
-      overflow-y: auto;
+      display: inline-block;
       position: relative;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      flex-basis: auto;
 
-      &:before{
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #C2C2C2;
-        bottom: 7px;
-
+      *{
+        user-select: none;
       }
     }
 
     &--add{
-      width: 147px;
-      height: 32px;
-      border-bottom: none;
-      border-radius: 6px;
-      margin: 0 auto;
-      box-shadow: 0px 4px 14px rgba(173, 181, 184, 0.4);
+      width: 100%;
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+
+      &-btn{
+        height: 32px;
+        width: 147px;
+        border-bottom: none;
+        border-radius: 6px;
+        margin: 0 auto;
+        box-shadow: 0px 4px 14px rgba(173, 181, 184, 0.4);
+      }
 
       i{
         display: block;
@@ -2192,13 +2273,21 @@
 
     &--nav{
       padding-right: 0;
-      width: 100%;
-      flex: 0 0 100%;
-      overflow-y: auto;
-      margin-bottom: 7px;
+      width: 767px !important;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow: auto;
+      margin-bottom: 0;
 
       &:before{
-        display: none;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #C2C2C2;
+        bottom: 0;
       }
 
       li{
@@ -2209,12 +2298,12 @@
         padding-left: 30px;
         padding-right: 30px;
         height: 42px;
+        width: 20%;
+        flex-basis: auto;
 
         &.current{
           color: #FCBC17;
-          @include rem(20);
-          line-height: 1.1;
-          font-weight: 500;
+          border-bottom-color: #FCBC17;
         }
       }
     }
