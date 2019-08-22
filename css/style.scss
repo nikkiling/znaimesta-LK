@@ -70,10 +70,16 @@
     @include rem(12);
     line-height: 14px;
     color: #FFFFFF;
+    transition: .25s ease-out;
+    cursor: pointer;
 
     i {
       margin-right: 5px;
       @include rem(16);
+    }
+
+    &:hover{
+      background: rgba(0, 0, 0, 0.55);
     }
 
   }
@@ -244,6 +250,7 @@
         .img-delete{
           visibility: visible;
           opacity: 1;
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
         }
       }
     }
@@ -344,8 +351,10 @@
   padding-top: 6px;
   margin-left: auto;
 
-  img {
-    margin-bottom: 15px;
+  .ic-more {
+    color: #C2C2C2;
+    font-size: 38px;
+    line-height: 6px;
   }
 
   &--view {
@@ -490,16 +499,26 @@
   padding-bottom: 44px;
   position: relative;
   margin-bottom: 39px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
 
   &--head{
     box-shadow: 0px 4px 14px rgba(219, 228, 227, 0.34);
     border-radius: 12px 12px 0 0;
-    transition: .5s;
     position: relative;
-    overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &:before{
+      content: "";
+      width: 30px;
+      height: 30px;
+      left: -5px;
+      top: -5px;
+      position: absolute;
+      border-radius: 12px;
+    }
   }
 
   &--badge{
@@ -682,6 +701,10 @@
   &.card-article{
     .b-card--head{
       height: 182px;
+
+      &:before{
+        background-color: #FF8181;
+      }
     }
 
     .b-card--badge{
@@ -698,6 +721,10 @@
   &.card-photo{
     .b-card--head{
       height: 268px;
+
+      &:before{
+        background-color: #D781FF;
+      }
     }
 
     .b-card--badge{
@@ -716,6 +743,10 @@
   &.card-route{
     .b-card--head{
       height: 202px;
+
+      &:before{
+        background-color: #6675FF;
+      }
     }
 
     .b-card--badge{
@@ -732,6 +763,10 @@
   &.card-review{
     .b-card--head{
       height: 202px;
+
+      &:before{
+        background-color: #A2F43A;
+      }
     }
 
     .b-card--badge{
