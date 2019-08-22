@@ -970,6 +970,71 @@
   position: relative;
 }
 
+.b-wrap{
+  overflow: hidden;
+  margin-bottom: 20px;
+  .row{
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+
+  .col,
+  [class*="col-"]{
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 8px;
+  }
+}
+
+.b-image{
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &--badge{
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 8px;
+    right: 10px;
+    bottom: 10px;
+    height: 26px;
+    padding: 2px 14px;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    max-width: 90%;
+
+    span{
+      font-style: normal;
+      font-weight: normal;
+      @include rem(12);
+      line-height: 14px;
+      color: #FFFFFF;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    i{
+      color: #FFFFFF;
+      @include rem(10);
+      margin-left: 4px;
+    }
+  }
+}
+
 @media only screen and (max-width: 1064px){
   .b-card-profile {
 
@@ -1368,6 +1433,43 @@
     }
   }
 
+  .b-wrap{
+    .row{
+      margin-left: -3px;
+      margin-right: -3px;
+    }
+
+    .col,
+    [class*="col-"]{
+      padding-left: 3px;
+      padding-right: 3px;
+      margin-bottom: 6px;
+    }
+  }
+
+  .b-card-add{
+    margin-bottom: 20px;
+  }
+
+  .b-image{
+    &--badge{
+      max-width: 80%;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      span{
+        font-weight: 500;
+        @include rem(10);
+        line-height: 12px;
+      }
+
+      i{
+        @include rem(8);
+        margin-left: 2px;
+      }
+    }
+  }
+
 }
 
 @media only screen and (max-width: 667px){
@@ -1691,10 +1793,10 @@
     }
 
     &--subtitle{
-      @include rem(14);
-      line-height: 16px;
-      margin-bottom: 8px;
-      text-align: center;
+      @include rem(10);
+      line-height: 12px;
+      margin-bottom: 4px;
+      text-align: right;
     }
 
     &--description{
@@ -1863,6 +1965,7 @@
       }
 
       .b-card--title{
+        margin-bottom: 8px;
         span{
           display: block;
         }
@@ -1901,7 +2004,6 @@
         flex: 0 0 100%;
         width: 100%;
         order: 4;
-        padding: 0 8px;
       }
     }
 
@@ -1971,25 +2073,34 @@
     }
 
     .all-rating{
-      display: block;
-      position: relative;
-      top: -4px;
-      margin-bottom: 15px;
+      top: 0;
+      margin-bottom: 9px;
     }
 
     .my-mark{
       &--circle{
-        width: 53px;
-        height: 53px;
-        @include rem(24);
-        line-height: 28px;
-        background-size: 58px;
+        width: 34px;
+        height: 34px;
+        @include rem(14);
+        line-height: 16px;
+        background-size: 38px;
       }
 
       span{
-        @include rem(14);
-        line-height: 16px;
+        @include rem(9);
+        line-height: 11px;
       }
+    }
+
+    .row{
+      margin-left: -4px;
+      margin-right: -4px;
+    }
+
+    .col,
+    [class*="col-"]{
+      padding-left: 4px;
+      padding-right: 4px;
     }
   }
 
@@ -2071,6 +2182,27 @@
           font-weight: 500;
         }
       }
+    }
+  }
+
+  .b-wrap{
+    .row{
+      margin-left: -2px;
+      margin-right: -2px;
+    }
+
+    .col,
+    [class*="col-"]{
+      padding-left: 2px;
+      padding-right: 2px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .b-card-add{
+    a{
+      @include rem(14);
+      line-height: 16px;
     }
   }
 }
