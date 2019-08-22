@@ -1052,7 +1052,7 @@ body {
 
 .b-card-profile {
   position: relative;
-  margin-bottom: 80px; }
+  margin-bottom: 36px; }
   .b-card-profile--social {
     position: absolute;
     background: #F5F5F5;
@@ -1841,7 +1841,7 @@ body {
     padding-top: 12px; }
 
   .b-popover {
-    margin-right: auto; }
+    margin-right: 25%; }
     .b-popover--view {
       right: auto;
       left: 50%;
@@ -1885,7 +1885,7 @@ body {
         font-size: 0.75rem;
         margin-right: 10px; }
     .b-card--body {
-      padding: 22px 30px 35px; }
+      padding: 22px 27px 35px; }
     .b-card--title {
       font-size: 1.125rem;
       line-height: 21px;
@@ -1906,7 +1906,7 @@ body {
       font-size: 0.875rem;
       line-height: 16px; }
     .b-card .add-bookmark {
-      width: 23px;
+      width: 18px;
       margin-top: 2px; }
       .b-card .add-bookmark:before {
         font-size: 1.3125rem; }
@@ -1960,7 +1960,7 @@ body {
       .b-card .card-route-bg:before {
         background-image: url(../images/route-2.svg);
         bottom: -60px;
-        right: -13px;
+        right: -17px;
         height: 186px;
         width: 550px; }
     .b-card .statistic-comments {
@@ -2261,6 +2261,10 @@ body {
     .b-popover--view a {
       font-size: 0.625rem;
       line-height: 12px; }
+  .b-popover .ic-more {
+    color: #C2C2C2;
+    font-size: 31px;
+    line-height: 7px; }
 
   .accordion-control {
     display: flex;
@@ -2319,8 +2323,7 @@ body {
     .b-card--subtitle {
       font-size: 0.625rem;
       line-height: 12px;
-      margin-bottom: 4px;
-      text-align: right; }
+      margin-bottom: 4px; }
     .b-card--description {
       font-size: 0.5625rem;
       line-height: 14px;

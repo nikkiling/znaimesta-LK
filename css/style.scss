@@ -22,7 +22,7 @@
 
 .b-card-profile {
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 36px;
 
   &--social {
     position: absolute;
@@ -1154,7 +1154,7 @@
   }
 
   .b-popover{
-    margin-right: auto;
+    margin-right: 25%;
 
     &--view {
       right: auto;
@@ -1221,7 +1221,7 @@
     }
 
     &--body{
-      padding: 22px 30px 35px;
+      padding: 22px 27px 35px;
     }
 
     &--title{
@@ -1252,7 +1252,7 @@
     }
 
     .add-bookmark{
-      width: 23px;
+      width: 18px;
       margin-top: 2px;
 
       &:before{
@@ -1350,7 +1350,7 @@
       &:before{
         background-image: url(../images/route-2.svg);
         bottom: -60px;
-        right: -13px;
+        right: -17px;
         height: 186px;
         width: 550px;
       }
@@ -1805,6 +1805,15 @@
         line-height: 12px;
       }
     }
+
+    .wrap-icon{
+    }
+
+    .ic-more {
+      color: #C2C2C2;
+      font-size: 31px;
+      line-height: 7px;
+    }
   }
 
   .accordion-control{
@@ -1891,7 +1900,6 @@
       @include rem(10);
       line-height: 12px;
       margin-bottom: 4px;
-      text-align: right;
     }
 
     &--description{
