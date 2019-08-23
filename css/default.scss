@@ -34,13 +34,13 @@ body{
 
 .b-inner{
   width: 100%;
-  max-width: 1064px;
-  padding: 0;
+  max-width: 1116px;
+  padding: 0 26px;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 667px){
-  .container-page{
+  .b-inner{
     padding: 0;
   }
 }

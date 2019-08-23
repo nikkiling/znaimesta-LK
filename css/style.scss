@@ -65,8 +65,6 @@
     top: -38px;
     padding: 0 15px;
     height: 28px;
-    font-style: normal;
-    font-weight: normal;
     @include rem(12);
     line-height: 14px;
     color: #FFFFFF;
@@ -106,8 +104,6 @@
       display: inline-flex;
       align-items: center;
       @include rem(14);
-      font-style: normal;
-      font-weight: normal;
       line-height: 16px;
 
       &:first-child{
@@ -149,7 +145,6 @@
     height: 56px;
     right: 0;
     padding: 10px;
-    font-style: normal;
     font-weight: 500;
     @include rem(18);
     line-height: 21px;
@@ -174,7 +169,6 @@
     width: 179px;
     right: 0;
     padding: 10px;
-    font-style: normal;
     font-weight: 500;
     @include rem(18);
     line-height: 21px;
@@ -238,7 +232,6 @@
         }
 
         span{
-          font-style: normal;
           font-weight: 500;
           @include rem(12);
           line-height: 14px;
@@ -264,7 +257,6 @@
       text-align: center;
       height: 23px;
       padding: 0 23px;
-      font-style: normal;
       font-weight: 500;
       @include rem(14);
       line-height: 16px;
@@ -284,8 +276,6 @@
 
   &--place {
     color: #2F80ED;
-    font-style: normal;
-    font-weight: normal;
     @include rem(18);
     line-height: 21px;
     transition: .25s ease-out;
@@ -300,16 +290,14 @@
   }
 
   &--title {
-    font-style: normal;
     font-weight: 500;
     @include rem(24);
     line-height: 28px;
     color: #232323;
-    padding-top: 29px;
+    padding-top: 39px;
   }
 
   &--subtitle {
-    font-style: normal;
     font-weight: 500;
     @include rem(14);
     line-height: 16px;
@@ -318,8 +306,6 @@
   }
 
   &--description {
-    font-style: normal;
-    font-weight: normal;
     @include rem(13);
     line-height: 15px;
     color: #A3A3A3;
@@ -328,8 +314,6 @@
   }
 
   &--text {
-    font-style: normal;
-    font-weight: normal;
     @include rem(18);
     line-height: 21px;
     color: #A3A3A3;
@@ -375,8 +359,6 @@
     transition: .25s ease-out;
 
     a {
-      font-style: normal;
-      font-weight: normal;
       @include rem(14);
       line-height: 16px;
       color: #404040;
@@ -399,10 +381,14 @@
   cursor: pointer;
   padding-top: 10px;
 
+  img{
+    transition: .25s;
+    transform: rotate(0deg);
+  }
+
   &.open{
     img{
       transform: rotate(180deg);
-      transition: .25s
     }
   }
 }
@@ -434,7 +420,6 @@
 
     span{
       color: #F2A000;
-      font-style: normal;
       font-weight: 900;
       line-height: 21px;
       @include rem(18);
@@ -470,7 +455,6 @@
     }
 
     li{
-      font-style: normal;
       font-weight: 500;
       @include rem(18);
       line-height: 21px;
@@ -589,8 +573,6 @@
     justify-content: center;
     height: 60px;
     align-items: flex-end;
-    font-style: normal;
-    font-weight: normal;
     @include rem(18);
     line-height: 21px;
     color: #A3A3A3;
@@ -622,7 +604,6 @@
 
   &--title{
     color: #232323;
-    font-style: normal;
     font-weight: 500;
     @include rem(26);
     line-height: 30px;
@@ -635,7 +616,6 @@
   }
 
   &--subtitle{
-    font-style: normal;
     font-weight: 500;
     @include rem(18);
     line-height: 21px;
@@ -645,8 +625,6 @@
 
   &--description{
     color: #404040;
-    font-style: normal;
-    font-weight: normal;
     @include rem(14);
     line-height: 16px;
     margin-bottom: 36px;
@@ -661,7 +639,6 @@
     justify-content: center;
     background: #FCBC17;
     border-radius: 6px;
-    font-style: normal;
     font-weight: 500;
     @include rem(18);
     line-height: 21px;
@@ -757,6 +734,10 @@
     .b-card--description{
       margin-bottom: 40px;
     }
+
+    .b-card--body{
+      padding-right: 56px;
+    }
   }
 
   &.card-review{
@@ -797,7 +778,6 @@
 
     li{
       margin-right: 20px;
-      font-style: normal;
       font-weight: 500;
       @include rem(14);
       line-height: 14px;
@@ -822,7 +802,6 @@
     }
 
     span{
-      font-style: normal;
       font-weight: 500;
       @include rem(14);
       line-height: 14px;
@@ -843,8 +822,6 @@
       width: 312px;
 
       span {
-        font-style: normal;
-        font-weight: normal;
         @include rem(14);
         line-height: 16px;
         color: #A3A3A3;
@@ -872,8 +849,6 @@
     border-radius: 8px;
     right: 38px;
     bottom: 18px;
-    font-style: normal;
-    font-weight: normal;
     @include rem(18);
     line-height: 21px;
     color: #FFFFFF;
@@ -883,8 +858,6 @@
 
   .all-rating{
     color: #A3A3A3;
-    font-style: normal;
-    font-weight: normal;
     @include rem(12);
     line-height: 14px;
 
@@ -904,7 +877,6 @@
       background-position: 50% 0%;
       width: 82px;
       height: 82px;
-      font-style: normal;
       font-weight: 900;
       @include rem(34);
       line-height: 40px;
@@ -915,8 +887,6 @@
     }
 
     span{
-      font-style: normal;
-      font-weight: normal;
       @include rem(18);
       line-height: 21px;
       color: #A3A3A3;
@@ -932,7 +902,6 @@
     .text{
       height: 17px;
       padding: 2px 7px 1px 6px;
-      font-style: normal;
       font-weight: 500;
       @include rem(13);
       line-height: 15px;
@@ -943,7 +912,6 @@
       top: -8px;
 
       em{
-        font-style: normal;
         @include rem(9);
         line-height: 11px;
         padding-left: 1px;
@@ -999,7 +967,6 @@
   margin-bottom: 40px;
   margin-top: 22px;
   a{
-    font-style: normal;
     font-weight: 500;
     @include rem(18);
     line-height: 21px;
@@ -1059,8 +1026,6 @@
     max-width: 90%;
 
     span{
-      font-style: normal;
-      font-weight: normal;
       @include rem(12);
       line-height: 14px;
       color: #FFFFFF;
@@ -1362,7 +1327,6 @@
 
       li{
         margin-right: 20px;
-        font-style: normal;
         font-weight: 500;
         @include rem(14);
         line-height: 14px;
@@ -1387,7 +1351,6 @@
       }
 
       span{
-        font-style: normal;
         font-weight: 500;
         @include rem(14);
         line-height: 14px;
@@ -1408,8 +1371,6 @@
         width: 312px;
 
         span {
-          font-style: normal;
-          font-weight: normal;
           @include rem(14);
           line-height: 16px;
           color: #A3A3A3;
@@ -1633,7 +1594,6 @@
           }
 
           span{
-            font-style: normal;
             font-weight: 500;
             @include rem(9);
             line-height: 11px;
@@ -1676,40 +1636,18 @@
       @include rem(12);
       line-height: 14px;
       padding-top: 9px;
-      margin-bottom: 13px;
+      margin-bottom: 11px;
     }
 
     &--description {
       @include rem(12);
       line-height: 14px;
-      padding-top: 13px;
-      margin-bottom: 12px;
+      padding-top: 12px;
+      margin-bottom: 13px;
       position: relative;
       padding-bottom: 13px;
-
-      &:before{
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 212px;
-        height: 1px;
-        background: #F6F6F6;
-        border-radius: 11px;
-        top: 0;
-      }
-
-      &:after{
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 212px;
-        height: 1px;
-        background: #F6F6F6;
-        border-radius: 11px;
-        bottom: 0;
-      }
+      border-top: 1px solid #F7F7F7;
+      border-bottom: 1px solid #F7F7F7;
     }
 
     &--text {
@@ -1717,6 +1655,10 @@
       @include rem(14);
       line-height: 16px;
       margin-bottom: 6px;
+
+      &.text-last{
+        margin-bottom: 10px;
+      }
     }
 
     .it-1{
@@ -1734,30 +1676,8 @@
     padding-top: 16px;
     position: relative;
     padding-bottom: 13px;
-
-    &:before{
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 212px;
-      height: 1px;
-      background: #F6F6F6;
-      border-radius: 11px;
-      top: 0;
-    }
-
-    &:after{
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 212px;
-      height: 1px;
-      background: #F6F6F6;
-      border-radius: 11px;
-      bottom: 0;
-    }
+    border-top: 1px solid #F7F7F7;
+    border-bottom: 1px solid #F7F7F7;
 
     .ic-vk {
       @include rem(13);
@@ -1830,6 +1750,21 @@
   .b-card{
     padding-bottom: 0;
     margin-bottom: 22px;
+    border-radius: 6px 6px 0 0;
+
+    &--head{
+      border-radius: 6px 6px 0 0;
+
+      &:before{
+        content: "";
+        width: 30px;
+        height: 30px;
+        left: -5px;
+        top: -5px;
+        position: absolute;
+        border-radius: 12px;
+      }
+    }
 
     &--badge{
 
@@ -2281,7 +2216,7 @@
 
     &--nav{
       padding-right: 0;
-      width: 767px !important;
+      width: 550px !important;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
